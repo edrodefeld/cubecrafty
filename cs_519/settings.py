@@ -25,7 +25,7 @@ SECRET_KEY = 'u-cqlqt)=k(-iy43pg1bb*3^)uctllx#s1j@ha-tg-cws&qp@='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.rodeyfeld.com']
 
 
 # Application definition
@@ -106,3 +106,5 @@ STATIC_BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
     os.path.join(STATIC_BASE_DIR, 'static'),
 )
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
