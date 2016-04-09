@@ -1,1 +1,1 @@
-web: gunicorn rodeyfeld.wsgi --log-file -
+web: gunicorn cs_519.wsgi --log-file -
