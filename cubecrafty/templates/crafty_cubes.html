@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+
+{% block base_body %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <h2>Craft Your Cube</h2>
+                        <div class="well">
+                            <form method="POST" action="conversation.php">
+                                <input type="hidden" name="designer_cube" value="" />
+                                <div class="form-group">
+                                    <h5>Send us your requested design!</h5>
+                                    <label for="messagebox" style="width:100%">
+                                        <textarea name="new_message" style="width:100%;"></textarea>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-success" value="Send" style="float:right; margin-bottom:25px;" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="jumbotron">
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2>Or</h2>
+                    <h4>Select from a the designer cubes below</h4>
+                    {% for cube in crafty_cubes %}
+                        <div class="row">
+                            <div class="well">
+                                <span>{{ cube.name }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
