@@ -1,6 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib.sitemaps.views import sitemap
 from cs_519.sitemap import *
+from django.http import HttpResponse
 from . import views
 
 sitemaps = {'static': StaticViewSitemap,}
