@@ -26,7 +26,7 @@ SECRET_KEY = 'u-cqlqt)=k(-iy43pg1bb*3^)uctllx#s1j@ha-tg-cws&qp@='
 DEBUG = True
 
 ALLOWED_HOSTS = ['www.rodeyfeld.com']
-SITE_ID = 3
+SITE_ID = 1
 
 # Application definition
 
