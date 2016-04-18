@@ -10,7 +10,7 @@
     {% block css %}{% endblock css %}
 
     <meta name="description" content="{% block meta_description %}CubeCrafty, the place for ice cubes{% endblock meta_description %}">
-    <meta name="keywords" content="{% block meta_keywords %}ice, ice cubes, custom ice cubes, round ice cubes, square ice cubes, custom, custom ice, custom cubes,{% endblock meta_keywords %}">
+    <meta name="keywords" content="{% block meta_keywords %}ice, ice cubes, ice cube trays, cube trays, custom ice cubes, round ice cubes, square ice cubes, custom, custom ice, custom cubes,{% endblock meta_keywords %}">
   {% endblock head %}
   <!-- Google Analytics Script -->
 <script>
@@ -57,22 +57,30 @@
       <div class="container">
         {% block jumbotron %}
           <h1>CraftyCube</h1>
-          <p>The cubes of your dreams</p>
+          <p>The #1 Source For Custom Ice Cubes</p>
         {% endblock jumbotron %}
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div>
-          <h3>Top Cubes</h3>
+          <h3>Top Ice Trays for Today</h3>
           <ul>
+          {% for cube in all_cubes %}
+              <div class="row">
+                  <div class="well">
+                      <span>{{ cube.name }}</span>
+                  </div>
+              </div>
+          {% endfor %}
           </ul>
         </div>
       </div>
     </div>
     <div class="jumbotron">
       <div class="container">
-        <h2>Chill out.</h2>
+        <h2>Customize your ice cubes today!</h2> 
+        <span><a href="/categories/crafty_cubes/" class="btn btn-success">Lets get started!</a></span>
 
       </div>
     </div>

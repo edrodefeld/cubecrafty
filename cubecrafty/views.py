@@ -4,7 +4,9 @@ from cubecrafty.models import *
 # Create your views here.
 
 def index(request):
+    all_cubes = Cube.objects.all()
     return render(request, 'index.html', {
+        "all_cubes": all_cubes,
         })
 
 def categories(request):
