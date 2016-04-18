@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'^checkout/$', views.checkout, name='checkout'),
     url(r'^confirmation/$', views.confirmation, name='confirmation'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /", mimetype="text/plain"))
+    url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: "))
 ]
