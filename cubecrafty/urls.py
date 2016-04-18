@@ -1,6 +1,9 @@
 from django.conf.urls import include, url
+from django.contrib.sitemaps.views import sitemap
+from cs_519.sitemap import *
 from . import views
 
+sitemaps = {'static': StaticViewSitemap,}
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -10,4 +13,5 @@ urlpatterns = [
     url(r'^cart/$', views.cart, name='cart'),
     url(r'^checkout/$', views.checkout, name='checkout'),
     url(r'^confirmation/$', views.confirmation, name='confirmation'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ]
