@@ -7,14 +7,26 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <h2>Your Cart</h2>
+                    <h2>My Cart</h2>
                     <div class="row">
-                        <div class="well">
-                            <span>My cart</span>
+                        {% for cube in cubes %}
+                            <div class="well">
+                                <span>{{ cube.name }} - {{ cube.price }}</span>
+                                <span>
+                                    <a href="/deleted/{{ cube.slug }}" class="btn btn-danger" style="float:right; ">
+                                    Remove
+                                    </a>  
+                                </span>
+                            </div>
+                        {% endfor %}
+                        <div class="well" style="background-color:#252830; color:white;" >
+                                <span>Total: ${{ total }}</span>
+                                <span>
+                                    <a href="/checkout/" class="btn btn-success" style="float:right; ">
+                                    Checkout
+                                    </a>  
+                                </span>
                         </div>
-                        <a href="/checkout/" class="btn btn-success" style="float:right; margin-bottom:25px;">
-                        Checkout
-                        </a>
                     </div>
                 </div>
                 <div class="col-md-3"></div>

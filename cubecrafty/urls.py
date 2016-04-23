@@ -8,9 +8,10 @@ sitemaps = {'static': StaticViewSitemap,}
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^categories/$', views.categories, name='categories'),
-    url(r'^categories/crafty_cubes/$', views.crafty_cubes, name='crafty_cubes'),
-    url(r'^categories/basic_cubes/$', views.basic_cubes, name='basic_cubes'),
+    url(r'^categories/(?P<category>[\w-]+)/$', views.categories, name='categories'),
+    url(r'^product/(?P<product>[\w-]+)/$', views.product, name='product'),
+    url(r'^added/(?P<product>[\w-]+)/$', views.added, name='added'),
+    url(r'^deleted/(?P<product>[\w-]+)/$', views.deleted, name='deleted'),
     url(r'^cart/$', views.cart, name='cart'),
     url(r'^checkout/$', views.checkout, name='checkout'),
     url(r'^confirmation/$', views.confirmation, name='confirmation'),
