@@ -54,10 +54,15 @@
   {% block base_body %}
     <div class="jumbotron">
       <div class="container">
-        {% block jumbotron %}
-          <h1>CraftyCube</h1>
-          <p>The #1 Source For Custom Ice Cubes</p>
-        {% endblock jumbotron %}
+          <div class="col-md-6">
+            <h1>CraftyCube</h1>
+            <p>The #1 Source For Custom Ice Cubes</p>
+          </div>
+          <div class="col-md-6">
+            <img style="float:right; height:220px;" src="{% static 'img/ice_cube.jpg' %}">
+          </div>
+          
+
       </div>
     </div>
     <div class="container">
@@ -82,6 +87,7 @@
         <span><a href="/categories/crafty_cubes/" class="btn btn-success">Lets get started!</a></span>
 
       </div>
+
     </div>
   {% endblock base_body %}
 </body>

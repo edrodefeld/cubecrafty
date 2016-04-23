@@ -7,19 +7,20 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <h2>Your Purchase was Accepted with the following items</h2>
+                    <h2>Your purchase was proccessed with the following items:</h2>
                     <div class="row">
+                    {% for cube in cubes %}
                         <div class="well">
-                            <span>Cube 1</span>
+                            <span>{{ cube.name }}</span><span style="float:right;"><a href="/product/{{ cube.slug }}/" class="btn btn-info">View Cube</a></span>
                         </div>
-                        <div class="well">
-                            <span>Cube 2</span>
-                        </div>
-                        <div class="well">
-                            <span>Cube 3</span>
-                        </div>
+                    {% endfor %}
+                    </div>
+                    <div class="row">
+                        <h3>Browse more ice cubes?</h3>
+                        <span><a href="/categories/standard/" class="btn btn-success">Let's go!</a></span>
                     </div>
                 </div>
+
                 <div class="col-md-3"></div>
             </div>
         </div>

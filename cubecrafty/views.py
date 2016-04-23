@@ -66,5 +66,13 @@ def checkout(request):
         })
 
 def confirmation(request):
+    slugs = request.session.get('cubes', [])
+    cubes = []
+    for slug in slugs:
+        cubes.append(Cube.objects.get(slug=slug))
+    if slugs:
+        request.session['cubes'] = []
+        request.session.modified = True
     return render(request, 'confirmation.html', {
+            'cubes': cubes,        
         })
