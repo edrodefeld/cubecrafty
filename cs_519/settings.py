@@ -25,8 +25,8 @@ SECRET_KEY = 'u-cqlqt)=k(-iy43pg1bb*3^)uctllx#s1j@ha-tg-cws&qp@='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.rodeyfeld.com']
-SITE_ID = 1
+ALLOWED_HOSTS = ['www.rodeyfeld.com', 'rodeyfeld.com']
+SITE_ID = 3
 
 # Application definition
 

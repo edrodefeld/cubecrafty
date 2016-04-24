@@ -12,3 +12,13 @@ class StaticViewSitemap(sitemaps.Sitemap):
 
     def location(self, item):
         return reverse(item)
+
+class ProductSitemap(sitemaps.Sitemap):
+    changefreq = "always"
+    priority = 0.5
+
+    def items(self):
+        return Cube.objects.all()
+
+    def lastmod(self, obj):
+        return obj.date_created
