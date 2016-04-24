@@ -8,10 +8,13 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <h2>{{ cube.category}} - {{ cube.name }}</h2>
+                      {% if cube.is_custom %}
+                      <span> (This cube is custom made by users!)</span>
+                      {% endif %}
                     <div class="well">
                         <span>{{ cube.description }}</span>
                         <span>{{ cube.price }}</span>
-                        <span><a href="/added/{{ cube.slug }}/" class="btn btn-success">Add Cube to Cart!</a></span>
+                        <span><a href="/added/{{ cube.slug }}/" class="btn btn-success">Add this Ice Cube to Cart!</a></span>
                     </div>
                 </div>
                 <div class="col-md-3"></div>

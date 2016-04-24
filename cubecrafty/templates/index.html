@@ -73,7 +73,10 @@
           {% for cube in all_cubes %}
               <div class="row">
                   <div class="well">
-                      <span>{{ cube.name }}</span>
+                      <span>{{ cube.name }} cube - {{ cube.price }}</span>
+                      {% if cube.is_custom %}
+                      <span>  (This cube is custom made by users!)</span>
+                      {% endif %}
                   </div>
               </div>
           {% endfor %}
